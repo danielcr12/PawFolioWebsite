@@ -18,3 +18,5 @@ privacy answers whenever PawFolio's data practices change.
 ## Support and contact
 
 The support landing page is the site home page. Contact PawFolio support and privacy at `danicarrero92@gmail.com`. The data deletion guide explains local and iCloud reset choices for English, Latin American Spanish, and Thai.
+
+Each deletion guide links to `pawfolio://settings/reset-data`. PawFolio handles this URL by presenting its reset options; the link never selects a deletion scope or confirms deletion.
