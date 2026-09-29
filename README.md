@@ -14,3 +14,7 @@ the pages in `PawFolio/Settings/Core/SettingsLegalLinks.swift`.
 
 The legal copy should be reviewed against the release binary and App Store
 privacy answers whenever PawFolio's data practices change.
+
+## Support and contact
+
+The support landing page is the site home page. Contact PawFolio support and privacy at `danicarrero92@gmail.com`. The data deletion guide explains local and iCloud reset choices for English, Latin American Spanish, and Thai.
