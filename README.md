@@ -1,10 +1,13 @@
-# PawFolio Legal Website
+# PawFolio Website
 
-Public, static legal pages for PawFolio, published with GitHub Pages.
+Public, static campaign, support, and legal pages for PawFolio, published with
+GitHub Pages.
 
-The site provides English, Spanish (Latin America), and Thai versions of the
-privacy policy, data deletion guide, and terms of service. The app links to
-the pages in `PawFolio/Settings/Core/SettingsLegalLinks.swift`.
+The localized home pages introduce PawFolio, explain the free tier and Ultra,
+and link to the App Store listing. The site also provides English, Spanish
+(Latin America), and Thai versions of the privacy policy, data deletion guide,
+and terms of service. The app links to legal pages in
+`PawFolio/Settings/Core/SettingsLegalLinks.swift`.
 
 ## Published URLs
 
@@ -17,6 +20,9 @@ privacy answers whenever PawFolio's data practices change.
 
 ## Support and contact
 
-The support landing page is the site home page. Contact PawFolio support and privacy at `danicarrero92@gmail.com`. The data deletion guide explains local and iCloud reset choices for English, Latin American Spanish, and Thai.
+The localized home page is also the support landing page. Contact PawFolio
+support and privacy at `danicarrero92@gmail.com`. The data deletion guide
+explains local and iCloud reset choices for English, Latin American Spanish,
+and Thai.
 
 Each deletion guide links to `pawfolio://settings/reset-data`. PawFolio handles this URL by presenting its reset options; the link never selects a deletion scope or confirms deletion.
