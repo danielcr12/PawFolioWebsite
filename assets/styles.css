@@ -1,36 +1,25 @@
 :root {
-  color-scheme: light dark;
-  --background: #f7f7f5;
+  color-scheme: light;
+  --background: #f7f9fc;
   --surface: #ffffff;
-  --text: #1b1d1c;
-  --muted: #656b68;
-  --accent: #2f7562;
-  --border: #dfe4e0;
-  --warning: #fff4d6;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #151817;
-    --surface: #202523;
-    --text: #f2f4f2;
-    --muted: #b1bab5;
-    --accent: #8dd2b9;
-    --border: #39423e;
-    --warning: #3b321d;
-  }
+  --text: #182c46;
+  --muted: #53647a;
+  --accent: #315d8a;
+  --border: #dce5ee;
+  --warning: #fff6dd;
 }
 
 * { box-sizing: border-box; }
 html { font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", sans-serif; }
 body { margin: 0; background: var(--background); color: var(--text); line-height: 1.65; }
 a { color: var(--accent); }
-.shell { width: min(100% - 2rem, 860px); margin: 0 auto; }
-header { padding: 3.5rem 0 2rem; }
+.shell { width: min(100% - 3rem, 860px); margin: 0 auto; }
+header { padding: 2rem 0 1.5rem; }
 .brand { color: var(--text); text-decoration: none; font-weight: 700; letter-spacing: .01em; }
-.eyebrow { color: var(--accent); font-size: .8rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; }
-h1 { margin: .35rem 0 .75rem; font-size: clamp(2rem, 5vw, 3.4rem); line-height: 1.1; letter-spacing: -.04em; }
-h2 { margin-top: 2.25rem; line-height: 1.2; }
+.eyebrow { display: flex; align-items: center; gap: .55rem; color: var(--text); font-size: 1.1rem; font-weight: 760; letter-spacing: -.04em; }
+.eyebrow::before { width: 42px; height: 40px; background: url("pawfolio.svg") center / contain no-repeat; content: ""; }
+h1 { margin: .65rem 0 .75rem; font-size: clamp(2.25rem, 5.5vw, 3.8rem); font-weight: 760; line-height: 1.04; letter-spacing: -.052em; }
+h2 { margin-top: 2.25rem; line-height: 1.2; letter-spacing: -.025em; }
 h3 { margin-top: 1.5rem; line-height: 1.3; }
 .lede { max-width: 680px; color: var(--muted); font-size: 1.1rem; }
 nav { display: flex; flex-wrap: wrap; gap: .6rem 1rem; padding: 1rem 0; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
@@ -41,13 +30,27 @@ main { padding-bottom: 3rem; }
 .card:hover { border-color: var(--accent); }
 .card h2 { margin: 0 0 .35rem; font-size: 1.15rem; }
 .card p { margin: 0; color: var(--muted); font-size: .95rem; }
-.app-link { display: inline-block; padding: .75rem 1rem; border-radius: .7rem; background: var(--accent); color: var(--background); font-weight: 700; text-decoration: none; }
+.app-link { display: inline-block; padding: .75rem 1rem; border-radius: .7rem; background: var(--text); color: #ffffff; font-weight: 700; text-decoration: none; }
 .app-link:hover, .app-link:focus-visible { text-decoration: underline; }
 .notice { margin: 1.5rem 0; padding: 1rem 1.2rem; background: var(--warning); border-left: 4px solid #d79b25; border-radius: .4rem; }
 li { margin: .45rem 0; }
 footer { padding: 2rem 0 3.5rem; color: var(--muted); font-size: .9rem; border-top: 1px solid var(--border); }
 .language { float: right; }
 @media (max-width: 600px) { .language { float: none; display: block; margin-top: .7rem; } header { padding-top: 2.4rem; } }
+
+.shell > header { padding: 1.6rem 0 1.35rem; }
+.shell > header .eyebrow { text-transform: none; }
+.shell > nav { align-items: center; gap: .65rem 1.1rem; padding: .85rem 0; }
+.shell > nav a { color: var(--accent); font-size: .88rem; font-weight: 620; }
+.shell > main { padding: 1.15rem 0 2.5rem; }
+.shell > main h2 { margin: 2rem 0 .65rem; font-size: 1.4rem; }
+.shell > main p, .shell > main li { color: var(--text); }
+.shell > main p { line-height: 1.7; }
+.shell > main a:not(.app-link) { text-decoration-thickness: 1px; text-underline-offset: .18em; }
+.shell > footer { padding: 1.2rem 0 2rem; border-top: 1px solid var(--border); font-size: .82rem; }
+.shell > .eyebrow { color: var(--text); }
+.notice { border: 1px solid #f1dfa8; border-left: 4px solid #d79b25; }
+.shell a:focus-visible { outline: 3px solid #986ce1; outline-offset: 3px; }
 
 /* PawFolio landing pages */
 body.landing-page {
@@ -98,9 +101,9 @@ body.landing-page a { color: inherit; }
 .availability-note { max-width: 205px; color: var(--body-ink); font-size: .75rem; line-height: 1.4; }
 .hero-promise { margin: 1.1rem 0 0; color: var(--body-ink); font-size: .86rem; font-weight: 620; }
 .hero-promise span { color: #b77d00; }
-.hero-art { position: relative; display: grid; min-height: 370px; place-items: center; isolation: isolate; }
-.art-sun { position: absolute; z-index: -1; width: min(31vw, 340px); aspect-ratio: 1; border-radius: 50%; background: var(--yellow); }
-.hero-mascot { position: relative; z-index: 1; width: min(92%, 365px); height: auto; }
+.hero-art { position: relative; display: grid; min-height: 390px; place-items: center; isolation: isolate; }
+.art-sun { position: absolute; z-index: 0; width: min(100%, 390px); aspect-ratio: 1; border-radius: 50%; background: var(--yellow); }
+.hero-mascot { position: relative; z-index: 1; width: min(84%, 330px); height: auto; }
 .art-sticker { position: absolute; z-index: 2; padding: .5rem .8rem; border: 1px solid rgba(24, 44, 70, .08); border-radius: 999px; background: var(--surface); color: var(--ink); font-size: .78rem; font-weight: 700; }
 .sticker-one { top: 11%; right: 0; transform: rotate(4deg); }
 .sticker-one span { color: #df725e; font-size: 1.1rem; vertical-align: -.06em; }
@@ -170,7 +173,7 @@ body.landing-page a { color: inherit; }
 
 @media (max-width: 850px) {
   .hero { grid-template-columns: minmax(0, 1fr) minmax(275px, .8fr); min-height: 470px; padding: 2.6rem; }
-  .hero-art { min-height: 320px; }
+  .hero-art { min-height: 360px; }
   .story-section { grid-template-columns: minmax(0, .9fr) minmax(290px, 1.1fr); gap: 2.3rem; }
   .feature-ribbon { gap: .9rem; }
   .feature-note { flex-direction: column; }
@@ -192,9 +195,9 @@ body.landing-page a { color: inherit; }
   .hero-actions { gap: .65rem; }
   .availability-note { max-width: 160px; font-size: .7rem; }
   .hero-promise { margin-top: .85rem; font-size: .8rem; }
-  .hero-art { min-height: 250px; margin: .1rem 0 0; }
-  .art-sun { width: min(65vw, 260px); }
-  .hero-mascot { width: min(78%, 270px); }
+  .hero-art { min-height: 260px; margin: .1rem 0 0; }
+  .art-sun { width: min(68vw, 250px); }
+  .hero-mascot { width: min(68%, 225px); }
   .sticker-one { top: 5%; right: 1%; }
   .memory-slip { right: 0; bottom: 0; }
   .story-section { grid-template-columns: 1fr; gap: 1.4rem; margin-bottom: 4.3rem; }
