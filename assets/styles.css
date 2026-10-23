@@ -92,13 +92,9 @@ body.landing-page a { color: inherit; }
 .hero h1 { max-width: 610px; font-size: clamp(3.25rem, 6vw, 5.1rem); }
 .hero-lede { max-width: 465px; margin: 1.25rem 0 1.5rem; color: var(--body-ink); font-size: clamp(1.04rem, 1.45vw, 1.18rem); line-height: 1.55; }
 .hero-actions { display: flex; flex-wrap: wrap; align-items: center; gap: .8rem 1rem; }
-.store-button { display: inline-flex; align-items: center; gap: .7rem; min-height: 3.55rem; padding: .5rem 1rem .5rem .65rem; border-radius: .85rem; background: var(--ink); color: white !important; text-decoration: none; transition: transform .16s ease, background-color .16s ease; }
-.store-button:hover { transform: translateY(-2px); background: #244568; }
-.store-mark { display: grid; width: 2.2rem; height: 2.2rem; place-items: center; border-radius: .65rem; background: var(--yellow); color: var(--ink); font-size: 1.15rem; font-weight: 800; }
-.store-button small, .store-button strong { display: block; line-height: 1.25; }
-.store-button small { color: #d3e0ee; font-size: .66rem; font-weight: 600; }
-.store-button strong { font-size: .9rem; }
-.availability-note { max-width: 205px; color: var(--body-ink); font-size: .75rem; line-height: 1.4; }
+.store-badge { display: inline-block; width: min(150px, 100%); line-height: 0; }
+.store-badge img { display: block; width: 100%; height: auto; }
+.store-badge:focus-visible { outline: 3px solid var(--blue-deep); outline-offset: 4px; border-radius: 5px; }
 .hero-promise { margin: 1.1rem 0 0; color: var(--body-ink); font-size: .86rem; font-weight: 620; }
 .hero-promise span { color: #b77d00; }
 .hero-art { position: relative; display: grid; min-height: 390px; place-items: center; isolation: isolate; }
@@ -192,7 +188,6 @@ body.landing-page a { color: inherit; }
   .handwritten-note { margin-bottom: .75rem; font-size: .9rem; }
   .hero-lede { margin: .9rem 0 1.1rem; font-size: .96rem; }
   .hero-actions { gap: .65rem; }
-  .availability-note { max-width: 160px; font-size: .7rem; }
   .hero-promise { margin-top: .85rem; font-size: .8rem; }
   .hero-art { min-height: 260px; margin: .1rem 0 0; }
   .art-sun { width: min(68vw, 250px); }
@@ -219,9 +214,4 @@ body.landing-page a { color: inherit; }
   .site-footer { grid-template-columns: 1fr; gap: .85rem; }
   .site-footer nav { justify-content: flex-start; }
   .copyright { grid-column: 1; }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .store-button { transition: none; }
-  .store-button:hover { transform: none; }
 }
